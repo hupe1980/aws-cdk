@@ -1,0 +1,100 @@
+{
+  "name": "@aws-cdk/aws-s3-static-website",
+  "description": "Constructs for creating static websites",
+  "version": "1.3.0",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "jsii": {
+    "targets": {
+      "java": {
+        "maven": {
+          "groupId": "software.amazon.awscdk",
+          "artifactId": "s3-static-website",
+          "versionSuffix": ".DEVPREVIEW"
+        },
+        "package": "software.amazon.awscdk.services.s3.static.website"
+      },
+      "dotnet": {
+        "namespace": "Amazon.CDK.AWS.S3.StaticWebsite",
+        "packageId": "Amazon.CDK.AWS.S3.StaticWebsite",
+        "signAssembly": true,
+        "assemblyOriginatorKeyFile": "../../key.snk",
+        "versionSuffix": "-devpreview"
+      },
+      "python": {
+        "distName": "aws-cdk.aws-s3-static-website",
+        "module": "aws_cdk.aws_s3_static_website"
+      }
+    },
+    "outdir": "dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aws/aws-cdk.git",
+    "directory": "packages/@aws-cdk/aws-s3-static-website"
+  },
+  "homepage": "https://github.com/aws/aws-cdk",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Amazon Web Services",
+    "url": "https://aws.amazon.com",
+    "organization": true
+  },
+  "keywords": [
+    "aws",
+    "cdk"
+  ],
+  "scripts": {
+    "build": "cdk-build",
+    "package": "cdk-package",
+    "pkglint": "pkglint -f",
+    "test": "cdk-test",
+    "watch": "cdk-watch",
+    "integ": "cdk-integ",
+    "awslint": "cdk-awslint",
+    "build+test+package": "npm run build+test && npm run package",
+    "build+test": "npm run build && npm test"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-cloudfront": "^1.3.0",
+    "@aws-cdk/aws-iam": "^1.3.0",
+    "@aws-cdk/aws-route53": "^1.3.0",
+    "@aws-cdk/aws-route53-targets": "^1.3.0",
+    "@aws-cdk/aws-s3": "^1.3.0",
+    "@aws-cdk/aws-s3-deployment": "^1.3.0",
+    "@aws-cdk/core": "^1.3.0"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "^1.3.0",
+    "@cloudcomponents/jest-cdk-snapshot": "^1.0.10",
+    "cdk-build-tools": "file:../../../tools/cdk-build-tools",
+    "cdk-integ-tools": "file:../../../tools/cdk-integ-tools",
+    "fast-check": "^1.16.0",
+    "jest": "^24.8.0",
+    "pkglint": "file:../../../tools/pkglint"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 30,
+        "statements": 80
+      }
+    }
+  },
+  "engines": {
+    "node": ">= 8.10.0"
+  },
+  "stability": "experimental",
+  "peerDependencies": {
+    "@aws-cdk/aws-cloudfront": "^1.3.0",
+    "@aws-cdk/aws-iam": "^1.3.0",
+    "@aws-cdk/aws-route53": "^1.3.0",
+    "@aws-cdk/aws-route53-targets": "^1.3.0",
+    "@aws-cdk/aws-s3": "^1.3.0",
+    "@aws-cdk/aws-s3-deployment": "^1.3.0",
+    "@aws-cdk/core": "^1.3.0"
+  }
+}
